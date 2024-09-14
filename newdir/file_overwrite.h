@@ -8,4 +8,5 @@ int read_from_dev_mem(off_t mem_offset,size_t mem_size);
 int Read_EcVsersion( );
 void Rebot();
 void ShutDown();
+int Readpci();
 #endif
