@@ -4,9 +4,9 @@ CFLAGS=-Wall -I.
   
 all: run_files12  
 #run_files12依赖于main.o和file_operations.o这两个对象文件
-run_files12: main.o file_overwrite.o file_mmap.o ec_version.o ec_rebot.o ec_shutdown.o
+run_files12: main.o file_overwrite.o file_mmap.o ec_version.o ec_rebot.o ec_shutdown.o readpci.o
 #编译生成run_files12 
-	$(CC) $(CFLAGS) -o run_files12 main.o file_overwrite.o file_mmap.o ec_version.o ec_rebot.o ec_shutdown.o
+	$(CC) $(CFLAGS) -o run_files12 main.o file_overwrite.o file_mmap.o ec_version.o ec_rebot.o ec_shutdown.o readpci.o
   
 main.o: main.c file_overwrite.h 
 	$(CC) $(CFLAGS) -c main.c  
@@ -25,6 +25,9 @@ ec_rebot.o:ec_rebot.c file_overwrite.h
 
 ec_shutdown.o:ec_shutdown.c file_overwrite.h
 	$(CC) $(CFLAGS) -c ec_shutdown.c
+
+readpci.o:readpci.c file_overwrite.h
+	$(CC) $(CFLAGS) -c readpci.c
 
 clean:  
 # 删除所有.o对象和run_files12可执行文件
