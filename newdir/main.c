@@ -18,7 +18,7 @@ int main() {
     printf("1.进行文件间数据替换：\n");
     printf("2.读位置从offset开始，长度为size的地址：\n");
     printf("3.读EC版本号\n");
-    printf("4.读pci设备以及配置空间（x86环境下）\n");
+    printf("4.读pci设备以及配置空间\n");
     printf("5.重启\n");
     printf("6.关机\n");
     int a;
